@@ -1,0 +1,8 @@
+/* Grunnleggende styling for prosjektet */
+html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, Helvetica, Arial, sans-serif;background:#f7f9fc;color:#111}
+header{background:#0b5cff;color:white;padding:12px}
+main{padding:20px;max-width:800px;margin:20px auto;background:white;border-radius:6px;box-shadow:0 2px 8px rgba(11,92,255,0.08)}
+button{background:#0b5cff;color:white;border:none;padding:10px 14px;border-radius:4px;cursor:pointer}
+pre{background:#f3f4f6;padding:10px;border-radius:4px}
+
+/* Tips: Legg til flere regler etter behov, eller bruk en preprosessor for større prosjekter. */
