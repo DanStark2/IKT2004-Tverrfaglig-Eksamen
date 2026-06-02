@@ -2,16 +2,45 @@
 
 Kort beskrivelse
 
-Denne repository er et malprosjekt for tverrfaglig eksamen i IKT2004. Inneholder frontend, backend, dokumentasjon, og database-eksempler.
+Dette repository er et eksamensprosjekt for IKT2004. Inneholder en enkel frontend (vanilla JS), en Express-backend og en lokal SQLite-lignende database med `sql.js`.
 
 Struktur
 
 - `src/` - kildekode for frontend og backend
+- `src/frontend` - statisk HTML/CSS/JS
+- `src/backend` - Express API (bruker `sql.js` og lagrer data i `database/database.sqlite`)
 - `docs/` - teknisk dokumentasjon og arkitektur
-- `database/` - SQL-schema og seed-data
+- `database/` - SQL-skjema og seed-data
 - `config/` - eksempelfil for miljøvariabler
 
-Tips
+Hurtigstart
 
-- Se `src/frontend/index.html` for hvordan frontend kobles til `style.css` og `script.js`.
-- Start backend med `npm install` og `npm start` i `src/backend`.
+1. Åpne en terminal i `src/backend`.
+2. Installer avhengigheter (kun første gang):
+
+```powershell
+npm install
+```
+
+3. Start serveren:
+
+```powershell
+npm start
+```
+
+4. Åpne frontend i nettleser:
+
+http://localhost:3000
+
+Notater og feilsøking
+
+- Backend bruker `sql.js` og oppretter `database/database.sqlite` automatisk ved første kjøring.
+- Hvis du får `EADDRINUSE` betyr det at port 3000 allerede er i bruk. Avslutt prosessen som bruker porten eller start serveren på en annen port: `PORT=3001 npm start` (Windows PowerShell: `$env:PORT=3001; npm start`).
+- `sqlite3` er fjernet fordi native kompileringsfeil oppsto i miljøet; `sql.js` brukes for enkel lokal persistens.
+
+API-endepunkter
+
+- `GET /api/products` - Henter alle produkter
+- `POST /api/products` - Oppretter et nytt produkt. Body JSON: `{ name, description, price, pictureUrl }`
+
+Se også `ai-logg.md` for mer informasjon.

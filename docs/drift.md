@@ -1,9 +1,4 @@
 # Drift
+![alt text](image.png)
 
-Driftsinstrukser for å sette opp applikasjonen i produksjon eller på en testserver.
-
-- Bygg og deploy backend på Node.js-vennlig plattform (Heroku, Azure, VPS).
-- Konfigurer `example.env` med riktige variabler og bruk en hemmelighetsmanager.
-
-Tips:
-- Bruk prosess-manager som PM2 for å holde Node-prosessen i gang.
+Dette er mitt forslag til en løsning. Når folk fra internett spør om tilgang til webserver blir de vidresendt til brannmuren som bestemmer hvor de skal plasseres. Hvis de ikke skal ha intern tilgang blir de sendt til DMZ hvor de kan få tilgang til bare webserveren men ikke noe annet. Hvis de prøver blir de stoppet av brannmuren.

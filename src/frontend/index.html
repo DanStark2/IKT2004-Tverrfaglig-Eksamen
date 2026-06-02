@@ -8,13 +8,34 @@
 </head>
 <body>
   <header>
-    <h1>IKT2004 - Eksamen</h1>
+    <div class="header-inner">
+      <h1>IKT2004 - Eksamen</h1>
+      <nav>
+        <a href="#" id="mainLink" class="active">Main</a>
+        <a href="#" id="adminLink">Admin panel</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <p>Dette er en enkel frontend som viser kommunikasjon med backend.</p>
-    <button id="pingBtn">Ping backend</button>
-    <pre id="output" aria-live="polite"></pre>
+    <section id="mainPage" class="page active">
+      <h2>Hva er dette?</h2>
+      <p>Dette er en enkel eksamensapplikasjon for IKT2004. Den viser hvordan en liten webapplikasjon kan bruke:</p>
+      <ul>
+        <li>En frontend med HTML, CSS og JavaScript</li>
+        <li>En Express backend med et API</li>
+        <li>Lagring av produkter i en lokal database</li>
+      </ul>
+      <p>Brukeren kan registrere produkter, og admin kan deretter se listen over lagrede produkter.</p>
+      <p>Trykk på <strong>Admin panel</strong> i menyen for å se produktlisten.</p>
+    </section>
+
+    <section id="adminPage" class="page">
+      <h2>Admin panel</h2>
+      <p>Her kan admin se alle lagrede produkter.</p>
+      <button id="refreshProductsBtn" type="button">Oppdater produktliste</button>
+      <div id="productList"></div>
+    </section>
   </main>
 
   <script src="script.js"></script>
